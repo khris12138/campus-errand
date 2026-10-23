@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>校园跑腿</title>
+<meta name="description" content="校园跑腿 —— 让校园里的每一件小事，都有人顺手帮你跑一趟。" />
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #14161a;
+    --muted: #5f6672;
+    --line: #e4e7ec;
+    --accent: #2f6bff;
+    --accent-soft: #eaf0ff;
+    --radius: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0f13;
+      --surface: #15181e;
+      --text: #f2f4f8;
+      --muted: #9aa3b2;
+      --line: #262b34;
+      --accent: #6c95ff;
+      --accent-soft: #17223c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                 "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  header {
+    padding: 28px 0 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    letter-spacing: .3px;
+  }
+  .logo {
+    width: 30px; height: 30px;
+    border-radius: 9px;
+    background: var(--accent);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 0 40px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 5px 12px;
+    font-weight: 600;
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .3; }
+  }
+  h1 {
+    font-size: clamp(32px, 7vw, 52px);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin: 20px 0 14px;
+  }
+  .lead {
+    font-size: clamp(16px, 2.4vw, 19px);
+    color: var(--muted);
+    max-width: 30em;
+    margin: 0 0 36px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 18px 16px;
+  }
+  .card h2 {
+    font-size: 15px;
+    margin: 0 0 4px;
+    letter-spacing: .2px;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+  .note {
+    font-size: 14px;
+    color: var(--muted);
+    border-left: 3px solid var(--line);
+    padding-left: 14px;
+    margin: 0;
+  }
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 20px 0 28px;
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">跑</span>
+        <span>校园跑腿</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <span class="badge"><span class="dot" aria-hidden="true"></span>开发中 · v0.1</span>
+      <h1>让校园里的每一件小事，<br />都有人顺手帮你跑一趟。</h1>
+      <p class="lead">
+        代取快递、带饭、打印、送文件 —— 在同一个校园里，把零散的需求和顺路的人对上。
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h2>帮我取</h2>
+          <p>快递驿站、外卖柜，顺路的人帮你带回宿舍。</p>
+        </div>
+        <div class="card">
+          <h2>帮我买</h2>
+          <p>食堂、超市、打印店，下单后有人替你排队。</p>
+        </div>
+        <div class="card">
+          <h2>帮我送</h2>
+          <p>文件、钥匙、小物件，校内专送，随叫随到。</p>
+        </div>
+      </div>
+
+      <p class="note">
+        这是项目的在线占位页，正式版本正在开发中。功能与界面会在本域名下持续更新。
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;width:100%;padding:0;">
+      <span>© <span id="y">2026</span> 校园跑腿</span>
+      <a href="https://github.com/khris12138/campus-errand">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
